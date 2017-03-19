@@ -6,6 +6,7 @@ import Quotes from './Quotes.js';
 import Footer from './Footer.js';
 import Doctors from './Doctors.js';
 import Doctor from './Doctor.js';
+import About from './About.js';
 // import logo from './logo.svg';
 import './css/App.css';
 
@@ -25,12 +26,6 @@ const NotFound = () => (
   </section>
 );
 
-const IdTest = (props) => (
-  <section className="w3-container w3-center w3-content" style={{"maxWidth":"800px"}}>
-    <h2 className="w3-wide">ID={props.params.id}</h2>
-  </section>
-);
-
 class App extends Component {
   render() {
     return (
@@ -40,6 +35,7 @@ class App extends Component {
           <Route path='quotes' component={Quotes} />
           <Route path='doctors' component={Doctors} />
           <Route path='doctors/:id' component={Doctor} />
+          <Route path='about' component={About} />
           <Route path='*' component={NotFound} />
         </Route>
       </Router>
